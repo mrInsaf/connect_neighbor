@@ -1,0 +1,314 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1601758003122-53c40e686a19?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    font-family: sans-serif;
+    margin: 0 auto; 
+    max-width: 1400px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+    /* grid-auto-rows: minmax(20px, auto); */
+    justify-items: center;
+}
+
+.reg-button {
+    padding-left: 15px;
+    color: #9b7625;
+    border-left: 1px solid;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 800;
+}
+
+.wrapper {
+    border-radius: 8px;
+    max-width: 1200px;
+    padding: 35px;;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.container .wrapper h2 {
+    justify-self: start;
+    font-weight: 800;
+    color: black;
+    grid-column: 1/4;
+}
+
+.profile-info {
+    border: 1px solid black;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+.profile-info img {
+    grid-column: 1/4;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.text-info {
+    border-bottom: 1px solid ;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.about-me h3{
+}
+
+
+.about-me p {
+    
+}
+
+.profile-info ul li {
+    background-color: rgba(50, 50, 50, 0.25);
+    display: inline;
+    margin: 0;
+    padding: 5px; /* Добавьте отступы, если необходимо */
+}
+
+.about-living {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.about-living .about-home {
+    padding: 0 20px;
+    grid-column: 1;
+}
+
+.about-home .bedrooms ul li {
+    background-color: #fff;
+}
+
+.profile-info h3 {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.about-home h3 {
+    max-width: 280px;
+}
+
+.about-neighbor {
+    grid-column: 2;
+}
+
+.header {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color:white;
+    grid-column-gap: 0px;
+    box-shadow: 0 1px 50px;
+    border-radius: 4px;
+}
+
+.header > ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header > ul > li {
+    margin-left: 30px;
+    
+}
+
+.header > ul > li > a {
+    display: block;
+    background-color:white;
+    color: black;
+}
+
+.header > ul > li > a:hover {
+    background-color:black;
+    color: beige;
+}
+
+.container > .main {
+    max-width: 1000px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.main .zagolovok {
+    grid-column: 1/4;
+    justify-self: start;
+    color: beige;
+    text-align: center;
+    align-self: end;
+}
+
+.main .zagolovok h1 {
+    font-size: 27px;
+    text-shadow: 0 1px 10px black;
+}
+
+.main > .search-filter {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.9);
+    text-align: start;
+    transition: 0.1s;
+    border-radius: 4px;
+    position: relative;
+}
+
+.main > .search-filter input {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.main > .search-filter > a {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+}
+
+input {
+    background-color: rgba(255,255,255,0.9);
+    width: 100%;
+    padding: 11px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+.main > .search-filter:hover {
+    background-color: #DFDEC2;
+}
+
+input:hover {
+    background-color: #DFDEC2;
+}
+
+.popup {
+    font-size: small;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    opacity: 0; /* Устанавливаем начальную непрозрачность 0 */
+    transform: translateY(-10px); /* Смещаем элемент вверх на 10px */
+    transition: 0.3s;
+}
+
+.popup button {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.search-filter:hover .popup {
+    display: block;
+    opacity: 1; /* При наведении устанавливаем прозрачность 1 (полностью видимым) */
+    transform: translateY(0); /* Убираем смещение вверх */
+}
+
+.search-filter .popup input {
+    background-color: white;
+}
+
+.search-filter .popup input:hover {
+    background-color: #DDDBD4;
+}
+
+.footer {
+    margin-left: 20px;
+    color: grey;
+    width: 100%;
+    background-color:black; /* Установите желаемый цвет фона */
+    padding: 10px;
+    text-align: start;
+}
+
+.registration-main  {
+    background-color: rgba(255,255,255,0.9);
+    height: auto;
+    max-width: 500px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: start;
+    border-radius: 8px;
+}
+
+.registration-main h1 {
+    margin-bottom: 10px;
+}
+
+.registration-main #submit {
+    font-size: 16px;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.new-offers {
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
+    background-color: #fff;
+    display: grid;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.new-offers img {
+    max-width: 250px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.new-offers h2 {
+    
+    
+}
+
+.cartochka {
+    border: 1px solid rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.cartochka .price p {
+    font-weight: 800;
+}
+
+
+

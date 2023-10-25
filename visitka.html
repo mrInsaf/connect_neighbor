@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitka</title>
+    <link rel="stylesheet" href="visitka.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>NeigborConnect</h1>
+            <ul>
+                <li><a href="visitka.html">Главная</a></li>
+                <li><a href="profile.html">Мой профиль</a></li>
+                <li><a href="#">Поиск жилья</a></li>
+                <li><a href="#">Поиск соседей</a></li>
+                <li><a href="#">Понравившееся</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="registration.html" class="reg-button">Зарегистрироваться</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="zagolovok">
+                <h1>Найди идеального соседа для совместного жилья</h1>
+            </div>
+            <div class="search-filter">
+                <a href="#">Количество комнат</a>
+                <div class="popup">
+                    <button data-value="1">1</button>
+                    <button data-value="2">2</button>
+                    <button data-value="3">3</button>
+                    <button data-value="4">4</button>
+                    <button data-value="5">5+</button>
+                </div>
+            </div>
+            <div class="search-filter">
+                <a href="#">Цена</a>
+                <div class="popup">
+                    <form>
+                        <label for="min-price">От</label>
+                        <input type="number" id="min-price">
+                        <label for="max-price">До</label>
+                        <input type="number" id="max-price">
+                    </form>
+                </div>
+            </div>
+            <div class="searach-filter">
+                <form>
+                    <input type="text" name="region" id="region" placeholder="Район">
+                </form>
+            </div>
+        </div>
+
+        <div class="new-offers">
+            <h2>Новые предложения</h2>
+            <div class="cartochka">
+                <img src="https://cdn-p.cian.site/images/1867572956-1.jpg" alt="">
+                <div class="price">
+                    <p>100 000 руб/мес.</p>
+                </div>
+                <div class="bedrooms">
+                    <p>4-х комнатная</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            © Создано Салаховым Инсафом Маратовичем
+        </div>
+
+    </div>
+</body>
+</html>
