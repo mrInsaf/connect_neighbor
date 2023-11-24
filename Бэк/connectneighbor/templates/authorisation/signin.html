@@ -1,0 +1,15 @@
+<!-- templates/registration/signin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signin</title>
+</head>
+<body>
+    <h2>Signin</h2>
+    <form method="post" action="{% url 'signin' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Signin</button>
+    </form>
+</body>
+</html>
